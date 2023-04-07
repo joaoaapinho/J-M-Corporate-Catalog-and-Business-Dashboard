@@ -6,11 +6,14 @@
 <p align="center"><b>Done by:</b> João André Pinho</p>
 <p align="center"><b>Project Supervisors:</b> Gustavo Martín Vela & Pepe García</p>
 
-<h2> Project Links and User Credentials </h2>
+<h2>🔗🔑 Project Links and User Credentials </h2>
 
+Links:
+- **Corporate Catalog** - https://frontend-catalog-dot-capstone-database-test.oa.r.appspot.com/
+- **Business Dashboard** - https://frontend-streamlit-dot-capstone-database-test.oa.r.appspot.com/
+- **API Endpoints** - https://api-dot-capstone-database-test.oa.r.appspot.com/
 
-
-In order to access these 2 services, please use one of the pre-registered profiles below:
+In order to access either the catalog or the dashboard services, please use one of the pre-registered profiles below:
 
 | Username  | Password (Non-Hashed Version) |
 | ------------- | ------------- |
