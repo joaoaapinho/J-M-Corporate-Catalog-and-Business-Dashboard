@@ -2,6 +2,8 @@
   <img src="https://user-images.githubusercontent.com/114337279/230568710-9de5ffda-ff76-4f74-9762-4878a7221d52.png" alt="Small logo" width="20%">
 </p>
 <h3 align="center">J&M Corporate Catalog and Business Dashboard</h3>
+<p> align="center"> Done by: João André Pinho </p>
+<p> align="center"> Project Supervisors: Gustavo Martín Vela & Pepe García </p>
 
 <h2> 👁‍🗨 Overview </h2>
 
