@@ -3,9 +3,9 @@
 </p>
 <h3 align="center">J&M Corporate Catalog and Business Dashboard</h3>
 
-<h2> Overview <h2>
+<h2> Overview </h2>
 
-<p> For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they still make informed decisions to drive business success. To address this need, J&M, a renowned international clothing brand, has undertaken a project to develop an exclusive employees' catalog and an interactive dashboard for top management teams.
+<p> For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they still make informed decisions to drive business success. To address this need, **J&M**, a renowned international clothing brand, has undertaken a project to develop an exclusive employees' catalog and an interactive dashboard for top management teams.
 
 The employees' catalog is a web page that features all the upcoming items that are set to drop in the next weeks before customers are notified. This catalog is designed to motivate employees by giving them access to exclusive information and products before they are available to the general public.
 
