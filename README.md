@@ -23,3 +23,8 @@ Take a look at the video below for a detailed overview of the project's flow ðŸ”
 <h2> Technology Stack </h2>
 
 Python, Javascript, SQL, Flask, Streamlit, Pandas, Dockers, Google App Engine, MySQL.
+
+
+<h2> Project Architecture </h2>
+
+![final_diagram](https://user-images.githubusercontent.com/114337279/230585043-7231db89-81a5-48f4-85e8-c8845b91aca5.png)
