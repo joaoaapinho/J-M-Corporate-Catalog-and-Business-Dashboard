@@ -27,7 +27,7 @@ In order to access either the catalog or the dashboard services, please use one 
 
 The employees' catalog is a web page that features all the upcoming items that are set to drop in the next weeks before customers are notified. This catalog is designed to motivate employees by giving them access to exclusive information and products before they are available to the general public.
 
-The top management team, besides the access to the catalog, has also access to a fully interactive business dashboard that provides them with important KPIs and charts to empower their teams to make more informed and performance focused decisions. This dashboard was built using Streamlit and retrieves data from a Google Cloud MySQL database through several Flask RestX API endpoints.
+In addition to having access to the catalog, the top management team can also access a fully interactive business dashboard that provides crucial key performance indicators (KPIs) and charts to assist their teams in making more informed and performance-focused decisions. The dashboard was developed using Streamlit and retrieves data from a Google Cloud MySQL database through multiple Flask RestX API endpoints.
 
 Take a look at the video below for a detailed overview of the project's flow 🔽</p>
 
