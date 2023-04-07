@@ -47,6 +47,8 @@ While the original datasets contained irrelevant or unnecessary columns, the dat
 
 ![catalog](https://user-images.githubusercontent.com/114337279/230591467-3e113662-d357-45d9-bf3a-7dea08824278.gif)
 
+**Description:**
+
 This Flask application provides a corporate catalog for workers to browse forthcoming store articles that are not yet publicly available. This service includes routes to: 
 
 - **Login** - The login route handles user authentication by comparing the user's input credentials to data saved in the database. If the credentials provided are validated through the performed SQL querying, the user is logged in and forwarded to the catalog page. Otherwise, an error flash message appears, and the user is sent to the login page to try again.
@@ -62,6 +64,8 @@ Overall, this service can be seen as an alternative entry point to the Business 
 **Demo:**
 
 ![streamlit](https://user-images.githubusercontent.com/114337279/230591489-f45869e8-2dd7-46db-88c6-396ec6a8dace.gif)
+
+**Description:**
 
 This Streamlit application provides a corporate dashboard for top managers to analyse and manage J&M customer, products, and transactions data in order to guide their teams into making better business decisions. This service is divided into three main components:
 
