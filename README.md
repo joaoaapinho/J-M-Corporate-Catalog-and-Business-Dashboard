@@ -45,6 +45,8 @@ While the original datasets contained irrelevant or unnecessary columns, the dat
 
 <h3> Exclusive Employees' Catalog </h3>
 
+![catalog](https://user-images.githubusercontent.com/114337279/230591467-3e113662-d357-45d9-bf3a-7dea08824278.gif)
+
 This Flask application provides a corporate catalog for workers to browse forthcoming store articles that are not yet publicly available. This page includes routes to the login, registration, catalog, and logout sites, as well as 404 error handling.
 
 It offers session management tools that ensure that specific routes are only accessible to logged-in users while connecting to a MySQL database using SQLAlchemy to store user registration and information and validate credentials.
@@ -52,6 +54,8 @@ It offers session management tools that ensure that specific routes are only acc
 Overall, this page may serve as an entry point to the Business Dashboard's Authentication Page via the Corporate Banner, in addition to offering a secure and unique manner for workers to become familiar with special J&M product information.
 
 <h3> Business Dashboard </h3>
+
+![streamlit](https://user-images.githubusercontent.com/114337279/230591489-f45869e8-2dd7-46db-88c6-396ec6a8dace.gif)
 
 This Streamlit application
 
