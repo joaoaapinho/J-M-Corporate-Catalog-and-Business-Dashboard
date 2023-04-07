@@ -41,5 +41,17 @@ This project features three main datasets that were instrumental in analyzing th
 
 While the original datasets contained irrelevant or unnecessary columns, the data was aggregated into a final dataframe named "final_data," which was used for the analysis. This dataframe aggregates the relevant columns from the three original datasets. The columns included in the final dataframe are t_dat, customer_id, age, club_member_status, fashion_news_frequency, article_id, product_type_name, colour_group_name, and sales_channel_id.
 
+<h2> Services </h2>
 
+<h3> Exclusive Employees' Catalog </h3>
+
+This Flask application provides a corporate catalog for workers to browse forthcoming store articles that are not yet publicly available. This page includes routes to the login, registration, catalog, and logout sites, as well as 404 error handling.
+
+It offers session management tools that ensure that specific routes are only accessible to logged-in users while connecting to a MySQL database using SQLAlchemy to store user registration and information and validate credentials.
+
+Overall, this page may serve as an entry point to the Business Dashboard's Authentication Page via the Corporate Banner, in addition to offering a secure and unique manner for workers to become familiar with special J&M product information.
+
+<h3> Business Dashboard </h3>
+
+This Streamlit application
 
