@@ -15,4 +15,4 @@ To ensure that only authorized employees have access to the catalog and dashboar
 
 Overall, this project aims to improve employee motivation and the efficiency and efficacy of business decisions by providing employees with exclusive information and senior management with the tools they need to make informed decisions. The catalog is built using Flask and HTML templates, while the dashboard is developed using Streamlit, Flask RestX API endpoints, and Google Cloud MySQL. 
 
-  The video below provides a detailed overview of the project's flow 🔽</p>
+ The video below provides a detailed overview of the project's flow 🔽</p>
