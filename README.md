@@ -3,7 +3,7 @@
 </p>
 <h3 align="center">J&M Corporate Catalog and Business Dashboard</h3>
 
-<h2> Overview </h2>
+<h2> 👁‍🗨 Overview </h2>
 
 <p> For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they still make informed decisions to drive business success. To address this need, J&M, a renowned international clothing brand, has undertaken a project to develop an exclusive employees' catalog and an interactive dashboard for top management teams.
 
@@ -18,16 +18,16 @@ The catalog was built using Flask, JS and HTML templates, while the dashboard wa
 Take a look at the video below for a detailed overview of the project's flow 🔽</p>
 
 
-<h2> Technology Stack </h2>
+<h2> 💻 Technology Stack </h2>
 
 Python, Javascript, SQL, Flask, Streamlit, Pandas, Dockers, Google App Engine, MySQL.
 
 
-<h2> Project Architecture </h2>
+<h2> ✏ Project Architecture </h2>
 
 ![final_diagram](https://user-images.githubusercontent.com/114337279/230586242-e3f3ad5f-7cc6-4a00-bf53-640ecc2d1aab.png)
 
-<h2> Datasets </h2>
+<h2> 🧮 Datasets </h2>
 
 This project features three main datasets that were instrumental in analyzing the three core dimensions of the company: Sales, Marketing, and Customer Preferences. The datasets consist of data related with Customers, Transactions, and Articles, each with their own unique set of columns that were carefully selected for analysis purposes.
 
@@ -69,7 +69,7 @@ Overall, this service can be seen as an alternative entry point to the Business 
 
 This Streamlit application provides a corporate dashboard for top managers to analyse and manage J&M customer, products, and transactions data in order to guide their teams into making better business decisions. This service is divided into three main components:
 
-<h4> Authentication </h4>
+- 🔐 Authentication:
   
 Using the streamlit authenticator package, the project implements authentication to the Streamlit dashboard. The authentication method employs a set of credentials, cookies, and a list of preauthorized email addresses saved in a config.yaml file. The password hashing.py program is used to hash plain-text passwords, which are subsequently saved in the config.yaml file.
 
@@ -77,7 +77,9 @@ When a user signs in, the main.py code reads the config.yaml file's credentials 
 
 This authentication method is safe because it employs password hashing and cookie-based authentication, which prevents attackers from reading user credentials even if they get database access. Moreover, only pre-authorized email addresses are permitted to access the dashboard, further strengthening security. 
   
-<h4> Filtering </h4>
+- 🔎 Filtering:
+
+
 
 
 
