@@ -27,5 +27,19 @@ Python, Javascript, SQL, Flask, Streamlit, Pandas, Dockers, Google App Engine, M
 
 <h2> Project Architecture </h2>
 
-![final_diagram](https://user-images.githubusercontent.com/114337279/230585321-eb437802-942c-4cab-873f-bcc2b54f1f5c.png)
+![final_diagram](https://user-images.githubusercontent.com/114337279/230586242-e3f3ad5f-7cc6-4a00-bf53-640ecc2d1aab.png)
+
+<h2> Datasets </h2>
+
+This project features three main datasets that were instrumental in analyzing the three core dimensions of the company: Sales, Marketing, and Customer Preferences. The datasets consist of data related with Customers, Transactions, and Articles, each with their own unique set of columns that were carefully selected for analysis purposes.
+
+- Customers Dataset: The Customers dataset features columns such as customer_id, FN, Active, club_member_status, fashion_news_frequency, age, and postal_code. These columns provide insights into customer demographics, preferences, and behavior. By analyzing this dataset, the business can better understand their customer base and tailor the company efforts to their specific needs.
+
+- Transactions Dataset: The Transactions dataset features columns such as t_dat, customer_id, article_id, price, and sales_channel_id. These columns provide insights into the company's sales performance, customer purchasing behavior, and sales channel effectiveness. By analyzing this dataset, the business can identify areas for improvement in their sales strategy and make data-driven decisions to optimize their revenue.
+
+- Articles Dataset: The Articles dataset features columns such as article_id, product_code, prod_name, product_type_name, colour_group_name, department_name, index_group_name, and section_name. These columns provide insights into the company's product offering, product popularity, and customer preferences. By analyzing this dataset, the business can better understand which products are most popular among customers, which product categories have the highest demand, and which colors or styles are trending.
+
+While the original datasets contained irrelevant or unnecessary columns, the data was aggregated into a final dataframe named "final_data," which was used for the analysis. This dataframe aggregates the relevant columns from the three original datasets. The columns included in the final dataframe are t_dat, customer_id, age, club_member_status, fashion_news_frequency, article_id, product_type_name, colour_group_name, and sales_channel_id.
+
+
 
