@@ -40,7 +40,7 @@ While the original datasets contained irrelevant or unnecessary columns, the dat
 
 <h2> 🔨 Services </h2>
 
-<h3> 👕👖 Employees' Exclusive Upcoming Collection Catalog </h3>
+<h3> 👕👖 Corporate Catalog </h3>
 
 **Demo:**
 
