@@ -5,7 +5,7 @@
 
 <h2> Overview <h2>
 
-For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they still make informed decisions to drive business success. To address this need, **J&M**, a renowned international clothing brand, has undertaken a project to develop an **exclusive employees' catalog** and an **interactive dashboard for top management teams**.
+<p> For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they still make informed decisions to drive business success. To address this need, **J&M**, a renowned international clothing brand, has undertaken a project to develop an **exclusive employees' catalog** and an **interactive dashboard for top management teams**.
 
 The employees' catalog is a web page that features all the upcoming items that are set to drop in the next weeks before customers are notified. This catalog is designed to motivate employees by giving them access to exclusive information and products before they are available to the general public.
 
@@ -15,4 +15,4 @@ To ensure that only authorized employees have access to the catalog and dashboar
 
 Overall, this project aims to improve employee motivation and the efficiency and efficacy of business decisions by providing employees with exclusive information and senior management with the tools they need to make informed decisions. The catalog is built using Flask and HTML templates, while the dashboard is developed using Streamlit, Flask RestX API endpoints, and Google Cloud MySQL. 
 
-The video below provides a detailed overview of the project's flow 🔽
+  The video below provides a detailed overview of the project's flow 🔽</p>
