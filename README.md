@@ -15,7 +15,7 @@ Links:
 
 In order to access either the catalog or the dashboard services, please use one of the pre-registered profiles below:
 
-| Username  | Password (Non-Hashed Version) |
+| Username  | Password (Non-Hashed Format) |
 | ------------- | ------------- |
 | suguslabs  | Capstone#23#  |
 | pepegar  | AdvProg#23#  |
