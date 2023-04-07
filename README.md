@@ -86,7 +86,7 @@ This Streamlit application provides a corporate dashboard for top managers to an
 
 - 🔐 **Authentication**:
   
-Using the streamlit authenticator package, the project implements authentication to the Streamlit dashboard. The authentication method employs a set of credentials, cookies, and a list of preauthorized email addresses saved in a config.yaml file. The password hashing.py program is used to hash plain-text passwords, which are subsequently saved in the config.yaml file.
+Using the streamlit authenticator package, the project implements authentication to the Streamlit dashboard. The authentication method employs a set of credentials, cookies, and a list of preauthorized email addresses saved in a config.yaml file. The password_hashing.py program is used to hash plain-text passwords, which are subsequently saved in the config.yaml file.
 
 When a user signs in, the main.py code reads the config.yaml file's credentials and displays a login form where the user may input their username and password. The streamlit authenticator library validates the user's credentials and sets a cookie to authenticate the user. In addition, depending on the authentication state, the the user will face one of three scenarios: successful authentication, authentication failure, or no details entered.
 
@@ -149,11 +149,11 @@ For the purpose of the project and as agreed with the project supervisor, the re
 
 <h2> 🎯 Conclusions and Future Improvements </h2>
 
-In sum, while motivating employees to keep working hard by giving them access to new collection pieces ahead of the market or by giving teams powerful tools and data to improve their decision making the integration of the catalog and business dashboard could resemble 2 positive events for the company's performance.
+In sum, by providing employees with early access to new collection pieces and equipping teams with powerful decision-making tools, the integration of the catalog and business dashboard can have a positive impact on the company's performance. These initiatives can motivate employees to work harder and make better decisions, leading to increased efficiency and profitability.
 
 While the developed services meet the agreed project requirements, there are still some improvement opportunities that can be explored in future updates:
 
-- **Increase the data size by expanding the number of rows from the current limit of 900,000 entries**, in order to gain access to a more comprehensive set of information
-- **Incorporate predictive modeling or machine learning functionalities** to identify trends and make predictions based on the available purchase data.
-- **Improve the security of the catalog registration page** by only allowing @jm-corporate.com emails to register.
+- **Increase the data size by expanding the number of rows from the current limit of 900,000 entries**, in order to gain access to a more comprehensive set of information.
+- **Incorporate predictive modeling or machine learning functionalities** to identify trends and make predictions based on available purchase data.
+- **Improve the security of the catalog registration page** by only allowing @jm-corporate.com emails to be able to register.
 - **Expand the scope and quality of the available KPIs by integrating external data** from other departments, such as costs and inventory.
