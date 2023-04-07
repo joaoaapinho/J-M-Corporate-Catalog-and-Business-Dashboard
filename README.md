@@ -17,8 +17,6 @@ The catalog was built using Flask, JS and HTML templates, while the dashboard wa
 
 Take a look at the video below for a detailed overview of the project's flow 🔽</p>
 
-[Video]
-
 
 <h2> Technology Stack </h2>
 
@@ -47,11 +45,15 @@ While the original datasets contained irrelevant or unnecessary columns, the dat
 
 ![catalog](https://user-images.githubusercontent.com/114337279/230591467-3e113662-d357-45d9-bf3a-7dea08824278.gif)
 
-This Flask application provides a corporate catalog for workers to browse forthcoming store articles that are not yet publicly available. This page includes routes to the login, registration, catalog, and logout sites, as well as 404 error handling.
+This Flask application provides a corporate catalog for workers to browse forthcoming store articles that are not yet publicly available. This service includes routes to: 
 
-It offers session management tools that ensure that specific routes are only accessible to logged-in users while connecting to a MySQL database using SQLAlchemy to store user registration and information and validate credentials.
+- **Login** - The login route handles user authentication by comparing the user's input credentials to data saved in the database. If the credentials provided are validated through the performed SQL querying, the user is logged in and forwarded to the catalog page. Otherwise, an error flash message appears, and the user is sent to the login page to try again.
+- **Registration** -  Corporate users can register on the J&M website using the registration method. After the registration form is submitted, the route checks to see if the entered username already exists in the database. If this occurs, the user is advised of the problem and returned to the registration page. If the username does not already exist in the database, the new user's credentials (i.e., incremental user_id, username and hashed password) are saved, and they are instantly logged in and routed to the catalog page.
+- **Catalog** - Only logged-in users may access the catalog route, which displays the company's product catalog. Users may explore the different product information, read an appreciation message left by J&M, have access to a support contact and logout.
+- **Logout** - The logout route locks out the user by deleting their session data and sending them to the login page. Having logged out, the user must re-enter their credentials to access the website's protected sections.
+- **Error 404 handling** - The 404 error route is a custom error page that appears when a user attempts to navigate to a non-existent website. The error notice instructs the user to return to the previous page.
 
-Overall, this page may serve as an entry point to the Business Dashboard's Authentication Page via the Corporate Banner, in addition to offering a secure and unique manner for workers to become familiar with special J&M product information.
+Overall, this service can be seen as an alternative entry point to the Business Dashboard's Authentication Page via the Corporate Banner Section, in addition to offering a secure and exciting manner for workers to become familiar with special J&M product information.
 
 <h3> Business Dashboard </h3>
 
