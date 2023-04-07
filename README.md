@@ -69,5 +69,16 @@ Overall, this service can be seen as an alternative entry point to the Business 
 
 This Streamlit application provides a corporate dashboard for top managers to analyse and manage J&M customer, products, and transactions data in order to guide their teams into making better business decisions. This service is divided into three main components:
 
+<h4> Authentication </h4>
+  
+Using the streamlit authenticator package, the project implements authentication to the Streamlit dashboard. The authentication method employs a set of credentials, cookies, and a list of preauthorized email addresses saved in a config.yaml file. The password hashing.py program is used to hash plain-text passwords, which are subsequently saved in the config.yaml file.
+
+When a user signs in, the main.py code reads the config.yaml file's credentials and displays a login form where the user may input their username and password. The streamlit authenticator library validates the user's credentials and sets a cookie to authenticate the user. In addition, depending on the authentication state, the the user will face one of three scenarios: successful authentication, authentication failure, or no details entered.
+
+This authentication method is safe because it employs password hashing and cookie-based authentication, which prevents attackers from reading user credentials even if they get database access. Moreover, only pre-authorized email addresses are permitted to access the dashboard, further strengthening security. 
+  
+<h4> Filtering </h4>
+
+
 
 
