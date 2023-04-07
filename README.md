@@ -112,6 +112,28 @@ As the core of the project, the last section is focused on the KPIs and Charts t
 - **Sales Channel Distribution Pie Chart**: A pie chart that shows the distribution of revenues among sales channels (Online and Offline) based on the selected filters.
 - **Top 10 Cumulative Revenue by Product Type Heatmap Chart**: A heatmap that shows the cumulative revenue of the top 10 best-selling product types over time based on the selected filters.
 
+<h3> 🌉 API Endpoints </h3>
+
+**Demo:**
+
+![api](https://user-images.githubusercontent.com/114337279/230611764-d5e4e255-1ad2-47ba-8dd6-c588a6040977.gif)
+
+**Description:**
+
+In order for the dashboard to operate properly, this one is dependent on a REST API service that connects to a MySQL database and provides endpoints for obtaining Sales, Marketing, and Customer Preferences data. 
+
+Flask-Restx and Swagger are used to produce the API documentation, and an API key is created for authentication. This one is established using the custom_api_key variable and is required to be provided in the header of the request with the name WHERE_IS_YOUR_API_KEY. If the provided API key matches the custom_api_key, the request will be authorized to access the data provided by the API. If the key doesn't match, the request will be denied with an error message. 
+
+The documentation aggregates three main namespaces: Sales, Marketing and Customer Preferences each with a single endpoint that retrieves the data required for all of the KPIs and Charts of the corresponding tabs. A Various namespace was also included with more specific and detailed queries that were not required for the dashboard, but could be useful for other tasks. 
+
+The code connects to the MySQL database and runs a SQL query to get data from the final_data table. The results are then returned as JSON through the API endpoints, which are dependent on Flask, SQLAlchemy, and retry libraries to facilitate the connection and interaction with the database.
+
+**Note:**
+
+For the purpose of the project and as agreed with the project supervisor, the retrieved data that was used was an undersample of 900,000 entries (i.e., using a LIMIT of 900000 on the appropriate queries) in order to reduce loading times.
+
+
+
 
 
 
