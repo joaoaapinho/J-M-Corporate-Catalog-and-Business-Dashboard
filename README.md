@@ -41,7 +41,9 @@ While the original datasets contained irrelevant or unnecessary columns, the dat
 
 <h2> Services </h2>
 
-<h3> Exclusive Employees' Catalog </h3>
+<h3> Employees' Exclusive Upcoming Collection Catalog </h3>
+
+**Demo:**
 
 ![catalog](https://user-images.githubusercontent.com/114337279/230591467-3e113662-d357-45d9-bf3a-7dea08824278.gif)
 
@@ -57,7 +59,11 @@ Overall, this service can be seen as an alternative entry point to the Business 
 
 <h3> Business Dashboard </h3>
 
+**Demo:**
+
 ![streamlit](https://user-images.githubusercontent.com/114337279/230591489-f45869e8-2dd7-46db-88c6-396ec6a8dace.gif)
 
-This Streamlit application
+This Streamlit application provides a corporate dashboard for top managers to analyse and manage J&M customer, products, and transactions data in order to guide their teams into making better business decisions. This service is divided into three main components:
+
+
 
