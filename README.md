@@ -6,6 +6,18 @@
 <p align="center"><b>Done by:</b> João André Pinho</p>
 <p align="center"><b>Project Supervisors:</b> Gustavo Martín Vela & Pepe García</p>
 
+<h2> Project Links and User Credentials </h2>
+
+
+
+In order to access these 2 services, please use one of the pre-registered profiles below:
+
+| Username  | Password (Non-Hashed Version) |
+| ------------- | ------------- |
+| suguslabs  | Capstone#23#  |
+| pepegar  | AdvProg#23#  |
+| joaoapinho  | #JustCoding23  |
+
 <h2> 👁‍🗨 Overview </h2>
 
 <p> For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they make informed decisions to drive business success. To address this need, J&M, a "renowned international clothing brand", has undertaken a project to develop an exclusive employees' catalog and an interactive dashboard for top management teams.
