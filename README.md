@@ -41,7 +41,7 @@ While the original datasets contained irrelevant or unnecessary columns, the dat
 
 <h2> 🔨 Services </h2>
 
-<h3> Employees' Exclusive Upcoming Collection Catalog </h3>
+<h3> 👕👖 Employees' Exclusive Upcoming Collection Catalog </h3>
 
 **Demo:**
 
@@ -59,7 +59,7 @@ This Flask application provides a corporate catalog for workers to browse forthc
 
 Overall, this service can be seen as an alternative entry point to the Business Dashboard's Authentication Page via the Corporate Banner Section, in addition to offering a secure and exciting manner for workers to become familiar with special J&M product information.
 
-<h3> Business Dashboard </h3>
+<h3> 📊 Business Dashboard </h3>
 
 **Demo:**
 
