@@ -24,7 +24,7 @@ Python, Javascript, SQL, Flask, Streamlit, Pandas, Dockers, Google App Engine, M
 
 <h2> 📝 Project Architecture </h2>
 
-![final_diagram](https://user-images.githubusercontent.com/114337279/230586242-e3f3ad5f-7cc6-4a00-bf53-640ecc2d1aab.png)
+![final_diagram](https://user-images.githubusercontent.com/114337279/230618035-4039a4e1-1789-4dfb-a89f-82c20b38ac91.png)
 
 <h2> 🧮 Datasets </h2>
 
