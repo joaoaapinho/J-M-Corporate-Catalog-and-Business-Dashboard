@@ -13,6 +13,13 @@ The top management team, besides the access to the catalog, has also access to a
 
 To ensure that only authorized employees have access to the catalog and dashboard, the project incorporates two completely different authentication methods.
 
-Overall, this project aims to improve employee motivation and the efficiency and efficacy of business decisions by providing employees with exclusive information and senior management with the tools they need to make informed decisions. The catalog is built using Flask and HTML templates, while the dashboard is developed using Streamlit, Flask RestX API endpoints, and Google Cloud MySQL. 
+The catalog was built using Flask, JS and HTML templates, while the dashboard was developed using Streamlit, Flask RestX API endpoints, and Google Cloud MySQL. 
 
- The video below provides a detailed overview of the project's flow 🔽</p>
+Take a look at the video below for a detailed overview of the project's flow 🔽</p>
+
+[Video]
+
+
+<h2> Technology Stack </h2>
+
+Python, Javascript, SQL, Flask, Streamlit, Pandas, Dockers, Google App Engine, MySQL.
