@@ -23,7 +23,7 @@ Take a look at the video below for a detailed overview of the project's flow �
 Python, Javascript, SQL, Flask, Streamlit, Pandas, Dockers, Google App Engine, MySQL.
 
 
-<h2> ✏ Project Architecture </h2>
+<h2> 📝 Project Architecture </h2>
 
 ![final_diagram](https://user-images.githubusercontent.com/114337279/230586242-e3f3ad5f-7cc6-4a00-bf53-640ecc2d1aab.png)
 
@@ -39,7 +39,7 @@ This project features three main datasets that were instrumental in analyzing th
 
 While the original datasets contained irrelevant or unnecessary columns, the data was aggregated into a final dataframe named "final_data," which was used for the analysis. This dataframe aggregates the relevant columns from the three original datasets. The columns included in the final dataframe are t_dat, customer_id, age, club_member_status, fashion_news_frequency, article_id, product_type_name, colour_group_name, and sales_channel_id.
 
-<h2> Services </h2>
+<h2> 🔨 Services </h2>
 
 <h3> Employees' Exclusive Upcoming Collection Catalog </h3>
 
