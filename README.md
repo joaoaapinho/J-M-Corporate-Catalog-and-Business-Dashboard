@@ -3,7 +3,7 @@
 </p>
 <h3 align="center">J&M Corporate Catalog and Business Dashboard</h3>
 
-##Overview
+<h2>Overview<h2>
 
 For many companies one of their main challenges passes through keeping their employees motivated and engaged while ensuring that they still make informed decisions to drive business success. To address this need, **J&M**, a renowned international clothing brand, has undertaken a project to develop an **exclusive employees' catalog** and an **interactive dashboard for top management teams**.
 
