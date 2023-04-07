@@ -31,9 +31,7 @@ The top management team, besides the access to the catalog, has also access to a
 
 Take a look at the video below for a detailed overview of the project's flow 🔽</p>
 
-
 https://user-images.githubusercontent.com/114337279/230647066-f92eddb8-b180-439e-a2ee-10cc6811dce2.mp4
-
 
 <h2> 💻 Technology Stack </h2>
 
