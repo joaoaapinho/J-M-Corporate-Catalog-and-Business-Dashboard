@@ -1,0 +1,5 @@
+Flask
+SQLAlchemy==1.4.40
+Werkzeug
+gunicorn
+pymysql

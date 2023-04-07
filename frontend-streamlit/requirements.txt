@@ -1,0 +1,14 @@
+altair==4.2.0
+Flask
+flask_restx
+pandas
+Pillow
+PyYAML
+requests
+retry
+SQLAlchemy==1.4.40
+streamlit
+streamlit_authenticator
+streamlit_option_menu
+gunicorn
+pymysql

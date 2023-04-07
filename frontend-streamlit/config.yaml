@@ -1,0 +1,28 @@
+
+# Defining the set of credentials, cookie and the list of preauthorized email addresses:
+
+credentials:
+  usernames:
+    suguslabs:
+      email: gustavom@faculty.ie.edu
+      name: Gustavo Martin Vela
+      password: $2b$12$6xwoGIfbGnydHgeF4u1.PeJg63XQLMyh1HkIw0/4VqQEUMabmJ/bW # Non-Hashed: Capstone#23#
+    pepegar:
+      email: jgarciah@faculty.ie.edu
+      name: Pepe Garcia
+      password: $2b$12$TpYk27Qu9bdDighMEwF0YueldKtGcclYR3M3VC56lx903CHk8ljKu # Non-Hashed: AdvProg#23#
+    joaoapinho:
+      email: joaoapinho@student.ie.edu
+      name: Joao Andre Pinho
+      password: $2b$12$PmC/.0VyNgXw1EdnCtph..hTUTCbMm/.OXvlQTuo9f7J3TAIF4sBO # Non-Hashed: #JustCoding23
+
+cookie:
+  expiry_days: 15
+  key: K0D4Z1N80Z%
+  name: cookie_token
+
+preauthorized:
+  emails:
+  - gustavom@faculty.ie.edu
+  - jgarciah@faculty.ie.edu
+  - joaoapinho@student.ie.edu 

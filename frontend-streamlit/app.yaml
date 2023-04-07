@@ -1,0 +1,31 @@
+# Specifying the runtime for the application.
+runtime: custom
+
+# Specifying environment settings.
+env: flex
+
+# Specifying name of the service.
+service: frontend-streamlit
+
+# Specifying the resources allocated for the service.
+resources:
+  cpu: 4
+  memory_gb: 12
+
+# Setting the runtime configuration for the application.
+runtime_config:
+  python_version: 3
+
+# Setting the application entrypoint.
+entrypoint: streamlit run main.py --server.port $PORT
+
+# Setting the scaling configuration for the application.
+automatic_scaling:
+  max_num_instances: 1
+
+# Adding the frontend_streamlit and images folders to the list of files to be included in the deployment package.
+handlers:
+  - url: /frontend-streamlit
+    static_dir: frontend-streamlit
+  - url: /frontend-streamlit/images
+    static_dir: frontend-streamlit/images

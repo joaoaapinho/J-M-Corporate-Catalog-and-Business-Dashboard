@@ -1,0 +1,73 @@
+<!-- Declaring the document type. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defining character encoding. -->
+    <meta charset="utf-8">
+    <!-- Setting viewport for responsive design. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Setting the page title. -->
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Adding a favicon. -->
+    <link rel="icon" type="image/x-icon" href="/static/img/jm_logo.png">
+
+    <!-- Linking custom CSS. -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+    <!-- Linking boxicons CSS. -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- Preconnecting to Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Linking Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Linking jQuery. -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Creating a container for the page. -->
+    <div class="page-container {% block page_class %}{% endblock %}">
+        <div class="content-wrap">
+            <!-- Header start. -->
+            <header>
+                <!-- Adding the logo. -->
+                <img src="/static/img/jm_logo.png" alt="J&M Logo">
+                <!-- Adding the menu icon. -->
+                <div class="bx bx-menu" id="menu-icon"></div>
+                <!-- Creating the navigation bar. -->
+                <ul class="navbar">
+                    <span class="header-text"> Employee's Exclusive Upcoming Collection Catalog</span>
+                </ul>
+                <!-- Adding icons and login/signup buttons. -->
+                <div class="icons">
+                    <i class='bx bxs-user-circle'></i>
+                    <a href="login" class="login-button" id="login-button">Login</a>
+                    <a href="registration" class="login-button" id="signup-button">Signup</a>
+                </div>
+            </header>
+            <!-- Main content. -->
+            <main class="main-content">
+                {% block content %}
+                {% endblock %}
+            </main>
+            <!-- Contact section start. -->
+            <section class="contact" id="contact">
+                <div class="main-contact">
+                    <div class="contact-content">
+                        <li><a href="#contact">Contact (Tel.): 888-999-333</a></li>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- Footer. -->
+    <div class="last">
+        <p class="logo-text"><img src="/static/img/ie_logo.png" alt="IE Logo" width="30" height="30"> <span>IE School of Science and Technology</span></p>
+        <p class="rights-text">All rights reserved © João André Pinho</p>
+    </div>
+    <!-- Linking custom JavaScript. -->
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

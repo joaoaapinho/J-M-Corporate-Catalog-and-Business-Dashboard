@@ -1,0 +1,38 @@
+# Specifying the runtime for the application.
+runtime: custom
+
+# Specifying environment settings.
+env: flex
+
+# Specifying name of the service.
+service: frontend-catalog
+
+# Specifying the resources allocated for the service.
+resources:
+  cpu: 1
+  memory_gb: 2
+
+# Setting the application entrypoint.
+entrypoint: gunicorn -b :$PORT main:app
+
+# Setting the scaling and key configuration for the application.
+automatic_scaling:
+  max_num_instances: 1
+
+env_variables:
+  SECRET_KEY: "DO_NOT_LOSE_THIS_KEY"
+
+# Adding the frontend_streamlit and images folders to the list of files to be included in the deployment package.
+handlers:
+  - url: /frontend-catalog
+    static_dir: frontend-catalog
+  - url: /frontend-streamlit/templates
+    static_dir: frontend-streamlit/templates
+  - url: /frontend-catalog/static
+    static_dir: /frontend-catalog/static
+  - url: /frontend-catalog/static/css
+    static_dir: /frontend-catalog/static/css
+  - url: /frontend-catalog/static/js
+    static_dir: /frontend-catalog/static/js
+  - url: /frontend-catalog/static/img
+    static_dir: /frontend-catalog/static/img

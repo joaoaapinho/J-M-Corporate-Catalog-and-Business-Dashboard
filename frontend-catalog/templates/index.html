@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}J&M - Login{% endblock %}
+
+{% block content %}
+
+    <!-- Catalog start. -->
+    <section class="login" id="login h1">
+        <h1> Welcome! </h1>
+        <div class="login">
+            <h2> In order to access this exclusive catalog, please log into your J&M Corporate Account. </h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                
+                {% for category, message in messages %}
+                <!-- Displaying a failed login message. -->
+                <div class="failed-login">
+                    {{message}}
+                </div>
+                {% endfor %}
+                
+            {% endif %}
+            {% endwith %}
+            <div class="login-box">
+                <!-- Adding a Login form. -->
+                <form  method="POST" action="{{ url_for('handle_login') }}">
+
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+
+                    <button type="submit">Sign In</button>
+
+                </form>
+                <div class="register-text">
+                    <p>Don't have a catalog account?</p>
+
+                    <!-- Adding a Register button. -->
+                    <button id="register-btn" data-url="{{ url_for('registration') }}">Register</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}

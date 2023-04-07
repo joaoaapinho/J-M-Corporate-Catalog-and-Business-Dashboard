@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block title %}J&M - Upcoming Collection Catalog{% endblock %}
+
+{% block page_class %}
+catalog
+{% endblock %}
+
+{% block content %}
+    <!-- Header start. -->
+    <header>
+        <!-- Adding the logo. -->
+        <img src="/static/img/jm_logo.png" alt="J&M Logo">
+        <!-- Adding the menu icon. -->
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <!-- Creating the navigation bar. -->
+        <ul class="navbar">
+            <li><a href="#catalog">Catalog</a></li>
+            <li><a href="#message"> Appreciation Message</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://frontend-streamlit-dot-capstone-database-test.oa.r.appspot.com" target="_blank">Corporate</a></li>
+        </ul>
+
+        <!-- Adding icons and logout button. -->
+        <div class="icons">
+            <i class='bx bxs-user-circle'></i>
+            <a class="logout-button" href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </header>
+
+    <!-- Catalog start. -->
+    <section class="catalog" id="catalog">
+		
+		<!-- Adding a user welcome message. -->
+		<div class="welcome-message">
+		{% if 'current_user' in session %}
+          <p>Welcome, {{ session['current_user']['username'] }}!</p>
+        {% endif %}
+		</div>
+		
+		<!-- Catalod title. -->
+		<h2> Upcoming Collection </h2>
+        <div class="container main-content">
+            
+			<!-- Catalog item 1. -->
+            <div class="box">
+                <img src="/static/img/prod_1.jpg">
+                <h4>Brown Striped Shirt (soon)</h4>
+                <h5>€50</h5>
+            </div>
+
+            <!-- Catalog item 2. -->
+            <div class="box">
+                <img src="/static/img/prod_2.jpg">
+                <h4>Dark Blue Shirt (soon)</h4>
+                <h5>€55</h5>
+            </div>
+
+            <!-- Catalog item 3. -->
+            <div class="box">
+                <img src="/static/img/prod_3.jpg">
+                <h4>Light Blue Shirt (soon)</h4>
+                <h5>€55</h5>
+            </div>
+
+            <!-- Catalog item 4. -->
+            <div class="box">
+                <img src="/static/img/prod_4.jpg">
+                <h4>White Shirt (soon)</h4>
+                <h5>€65</h5>
+            </div>
+
+            <!-- Catalog item 5. -->
+            <div class="box">
+                <img src="/static/img/prod_5.jpg">
+                <h4>Black T-shirt (soon)</h4>
+                <h5>€45</h5>
+            </div>
+
+            <!-- Catalog item 6. -->
+            <div class="box">
+                <img src="/static/img/prod_6.jpg">
+                <h4>Mauve T-Shirt (soon)</h4>
+                <h5>€45</h5>
+            </div>
+
+            <!-- Catalog item 7. -->
+            <div class="box">
+                <img src="/static/img/prod_7.jpg">
+                <h4>Camel T-Shirt (soon)</h4>
+                <h5>€55</h5>
+            </div>
+
+            <!-- Catalog item 8. -->
+            <div class="box">
+                <img src="/static/img/prod_8.jpg">
+                <h4>Light Grey Tshirt (soon)</h4>
+                <h5>€25</h5>
+            </div>
+
+			<!-- Catalog item 9. -->
+			<div class="box">
+				<img src="/static/img/prod_9.jpg">
+				<h4>Black Jeans (soon)</h4>
+				<h5>€75</h5>
+			</div>
+	
+			<!-- Catalog item 10. -->
+			<div class="box">
+				<img src="/static/img/prod_10.jpg">
+				<h4>Dark Blue Jeans (soon)</h4>
+				<h5>€35</h5>
+			</div>
+	
+			<!-- Catalog item 11. -->
+			<div class="box">
+				<img src="/static/img/prod_11.jpg">
+				<h4>Grey Washed Jeans (soon)</h4>
+				<h5>€35</h5>
+			</div>
+	
+			<!-- Catalog item 12. -->
+			<div class="box">
+				<img src="/static/img/prod_12.jpg">
+				<h4>Classic Blue Jeans (soon)</h4>
+				<h5>€50</h5>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Message start. -->
+	<section class="message" id="message">
+		<div class="message-content">
+			<h2>Thank you.</h2>
+			<p>We just wanted to take a minute to say THANK YOU for being a loyal employee. We couldn't have made it this far without you. 
+				At J&M, we hope you enjoy our upcoming collection and relax, once these pieces become available you will be the first to know.
+			</p>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,6 @@
+Flask
+flask_restx
+retry
+SQLAlchemy==1.4.40
+gunicorn
+pymysql

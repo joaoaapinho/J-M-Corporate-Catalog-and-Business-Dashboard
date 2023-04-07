@@ -1,0 +1,25 @@
+# Specifying the runtime for the application.
+runtime: python
+
+# Specifying name of the service.
+service: api
+
+# Specifying environment settings.
+env: flex
+
+# Setting the runtime configuration for the application.
+runtime_config:
+  python_version: 3
+
+# Setting the application entrypoint.
+entrypoint: gunicorn -b :$PORT main:app
+
+# Setting the scaling configuration for the application.
+manual_scaling:
+  instances: 1
+
+# Setting the resource configuration for the application.
+resources:
+  cpu: 4
+  memory_gb: 12
+  disk_size_gb: 20

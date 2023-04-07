@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}J&M - Registration{% endblock %}
+
+{% block content %}
+    <!-- Catalog start. -->
+    <section class="login" id="login h1">
+        <h1> You are almost there! </h1>
+        <div class="login">
+            <h2> Enter your corporate details below to complete your registration. </h2>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                
+                {% for category, message in messages %}
+                <!-- Displaying registration messages. -->
+                <div class="failed-login">
+                    {{message}}
+                </div>
+                {% endfor %}
+                
+            {% endif %}
+            {% endwith %}
+            <!-- Adding a Registration form. -->
+            <form class="login-box" method="POST" action="{{ url_for('handle_registration') }}">
+
+                <input type="text" id="username" name="username" placeholder="Username" required>
+
+                <input type="password" id="password" name="password" placeholder="Password" required>
+
+                <button type="submit">Register</button>
+
+            </form>
+        </div>
+    </section>
+
+{% endblock %}
