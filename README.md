@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/114337279/230568710-9de5ffda-ff76-4f74-9762-4878a7221d52.png" alt="Small logo">
+  <img src="https://user-images.githubusercontent.com/114337279/230568710-9de5ffda-ff76-4f74-9762-4878a7221d52.png" alt="Small logo" width="30%">
 </p>
 
 # J-M-Corporate-Catalog-and-Business-Dashboard
