@@ -132,12 +132,13 @@ The code connects to the MySQL database and runs a SQL query to get data from th
 
 For the purpose of the project and as agreed with the project supervisor, the retrieved data that was used was an undersample of 900,000 entries (i.e., using a LIMIT of 900000 on the appropriate queries) in order to reduce loading times.
 
+<h2> 🎯 Conclusions and Future Improvements </h2>
 
+In sum, while motivating employees to keep working hard by giving them access to new collection pieces ahead of the market or by giving teams powerful tools and data to improve their decision making the integration of the catalog and business dashboard could resemble 2 positive events for the company's performance.
 
+While the developed services meet the agreed project requirements, there are still some improvement opportunities that can be explored in future updates:
 
-
-
-
-
-
-
+- **Increase the data size by expanding the number of rows from the current limit of 900,000 entries**, in order to gain access to a more comprehensive set of information
+- **Incorporate predictive modeling or machine learning functionalities** to identify trends and make predictions based on the available purchase data.
+- **Improve the security of the catalog registration page** by only allowing @jm-corporate.com emails to register.
+- **Expand the scope and quality of the available KPIs by integrating external data** from other departments, such as costs and inventory.
