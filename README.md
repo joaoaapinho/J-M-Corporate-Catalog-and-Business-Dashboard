@@ -3,8 +3,8 @@
 </p>
 <h3 align="center">J&M Corporate Catalog and Business Dashboard</h3>
 
-<p align="center"><b>Done by:</b> João André Pinho</p>
-<p align="center"><b>Project Supervisors:</b> Gustavo Martín Vela & Pepe García</p>
+<p align="center">**Done by:** João André Pinho</p>
+<p align="center">**Project Supervisors:** Gustavo Martín Vela & Pepe García</p>
 
 <h2> 👁‍🗨 Overview </h2>
 
