@@ -29,7 +29,7 @@ The employees' catalog is a web page that features all the upcoming items that a
 
 In addition to having access to the catalog, the top management team can also access a fully interactive business dashboard that provides crucial key performance indicators (KPIs) and charts to assist their teams in making more informed and performance-focused decisions. The dashboard was developed using Streamlit and retrieves data from a Google Cloud MySQL database through multiple Flask RestX API endpoints.
 
-Take a look at the video below for a detailed overview of the project's flow 🔽</p>
+Take a look at the video below for a quick overview of the project's flow 🔽</p>
 
 https://user-images.githubusercontent.com/114337279/230647066-f92eddb8-b180-439e-a2ee-10cc6811dce2.mp4
 
