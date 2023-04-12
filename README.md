@@ -91,6 +91,8 @@ Using the streamlit authenticator package, the project implements authenticati
 When a user signs in, the main.py code reads the config.yaml file's credentials and displays a login form where the user may input their username and password. The streamlit authenticator library validates the user's credentials and sets a cookie to authenticate the user. In addition, depending on the authentication state, the the user will face one of three scenarios: successful authentication, authentication failure, or no details entered.
 
 This authentication method is safe because it employs password hashing and cookie-based authentication, which prevents attackers from reading user credentials even if they get database access. Moreover, only pre-authorized email addresses are permitted to access the dashboard, further strengthening security. 
+
+This second authentication layer is distinct from the one in the catalog, as it is designed to limit access to the company's sensitive data. Access to the dashboard is restricted to top managers only, requiring a higher level of authentication and authorization.
   
 - 🔎 **Filtering**:
 
