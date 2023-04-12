@@ -53,7 +53,7 @@ if authentication_status:
     api_url = "https://api-dot-capstone-database-test.oa.r.appspot.com"
 
     def make_request(main_url, service_url):
-        headers = {'custom_api_key': "DO_NOT_LOSE_THIS_KEY"}
+        headers = {"Authorization": "Bearer DO_NOT_LOSE_THIS_KEY"}
         response = requests.get(f"{main_url}{service_url}", headers = headers)
         response_json = response.json()
         return response_json
