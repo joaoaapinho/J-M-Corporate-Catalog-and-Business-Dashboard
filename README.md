@@ -145,9 +145,11 @@ The documentation aggregates three main namespaces: Sales, Marketing and Custome
 
 The code connects to the MySQL database and runs a SQL query to get data from the final_data table. The results are then returned as JSON through the API endpoints, which are dependent on Flask, SQLAlchemy, and retry libraries to facilitate the connection and interaction with the database.
 
-**Note:**
+**Notes:**
 
 For the purpose of the project and as agreed with the project supervisor, the retrieved data that was used was an undersample of 900,000 entries (i.e., using a LIMIT of 900000 on the appropriate queries) in order to reduce loading times.
+
+Additionally, this demo primarily demonstrates the endpoint responses. To retrieve the data, requests must include the appropriate "Authorization" header containing the authentication key for secure access.
 
 <h2> 🎯 Conclusions and Future Improvements </h2>
 
