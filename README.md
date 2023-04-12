@@ -137,9 +137,9 @@ As the core of the project, the last section is focused on the KPIs and Charts t
 
 **Description:**
 
-In order for the dashboard to operate properly, this one is dependent on a REST API service that connects to a MySQL database and provides endpoints for obtaining Sales, Marketing, and Customer Preferences data. 
+In order for the dashboard to operate properly, this one is dependent on a REST API service that connects to a MySQL database and provides endpoints for obtaining Sales, Marketing, and Customer Preferences data.
 
-Flask-Restx and Swagger are used to produce the API documentation, and an API key is created for authentication. This one is established using the custom_api_key variable and is required to be provided in the header of the request with the name WHERE_IS_YOUR_API_KEY. If the provided API key matches the custom_api_key, the request will be authorized to access the data provided by the API. If the key doesn't match, the request will be denied with an error message. 
+Flask-Restx and Swagger are used to produce the API documentation, and an API key is created for authentication. The API key is established using auth_db and must be provided in the "Authorization" header of the request. If the provided API key matches the one in auth_db, the request will be authorized to access the data provided by the API. If the key doesn't match, the request will be denied with an error message.
 
 The documentation aggregates three main namespaces: Sales, Marketing and Customer Preferences each with a single endpoint that retrieves the data required for all of the KPIs and Charts of the corresponding tabs. A Various namespace was also included with more specific and detailed queries that were not required for the dashboard, but could be useful for other tasks. 
 
