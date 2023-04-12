@@ -3,10 +3,11 @@
 #---------------------------------------------------------------------------------------
 
 # Importing the necessary libraries and modules.
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from sqlalchemy import create_engine
 from flask_restx import Api, Namespace, Resource
 import retry
+import json
 
 #---------------------------------------------------------------------------------------
 # Connection to the Database, Documentation Creation, and API Key Authentication
@@ -33,31 +34,12 @@ api = Api(app, version = '2.0',
         This REST API built using Flask and Flask-Restx is intended to request and receive data from J&M MySQL database.
         """,
     contact = "joaoapinho@student.ie.edu",
-    endpoint = "/api/v2", 
-    security = 'custom_key'
+    endpoint = "/api/v2"
 )
 
-# Establishing an API key for the autheticator.
-custom_api_key = "DO_NOT_LOSE_THIS_KEY"
-
-# Defining a decorator for checking the API key.
-def check_api_key(func):
-    def wrapped_function(*args, **kwargs):
-        provided_key = request.headers.get('WHERE_IS_YOUR_API_KEY')
-        if provided_key == custom_api_key:
-            return func(*args, **kwargs)
-        else:
-            return {'message': 'Incorrect API key provided. Access denied.'}, 401
-    return wrapped_function
-
-
-# Defining the API key security scheme.
-api.authorizations = {
-    'customkey': {
-        'type': 'customkey',
-        'in': 'header',
-        'name': 'WHERE_IS_YOUR_API_KEY'
-    }
+# Establishing an API key for the authenticator.
+auth_db = { 
+    'DO_NOT_LOSE_THIS_KEY'
 }
 
 # Establishing the connection with the MySQL database using the provided credentials.
@@ -78,6 +60,50 @@ def disconnect(conn):
     conn.close()
 
 #---------------------------------------------------------------------------------------
+# Query Execution Function & Status Code Responses
+#---------------------------------------------------------------------------------------
+
+# Creating a function to execute all the queries.
+def query_all(query):
+    try:
+        # Checking for the presence of "Authorization" in the request headers.
+        if "Authorization" not in request.headers:
+            # Returning an error response for unauthorized access.
+            return json.dumps({'message': 'Authentication Error: Unauthorized Access.'}), 401
+        else:
+            # Extracting the token from the "Authorization" header.
+            header = request.headers["Authorization"]
+            token = header.split()[1]
+
+            # Verifying if the token is present in the authentication database.
+            if token not in auth_db:
+                # Returning an error response for unauthorized access.
+                return json.dumps({'message': 'Authentication Error: Unauthorized Access.'}), 401
+
+        # Establishing a connection to the database.
+        conn = connect()
+
+        # Executing the query and fetching all results.
+        result = conn.execute(query).fetchall()
+
+        # Disconnecting from the database.
+        disconnect(conn)
+
+        # Returning the results as a JSON response.
+        return jsonify({'result': [dict(row) for row in result]})
+    
+    except Exception as e:
+        return json.dumps({"message": "'Internal Server Error: Database Offline"}), 500
+
+# Defining responses for the API endpoint.
+common_responses={
+        200: 'Success',
+        401: 'Authentication Error: Unauthorized Access',
+        404: 'Resource Not Found Error: Not Found',
+        500: 'Internal Server Error: Database Offline'
+    }
+
+#---------------------------------------------------------------------------------------
 # Sales Namespace (Tab 1 KPIs and Charts)
 #---------------------------------------------------------------------------------------
 
@@ -93,33 +119,20 @@ api.add_namespace(sales)
 # the same across all KPIs and Charts.
 @sales.route("/sales/sales_data")
 
-class select_user(Resource):
+class select_sales(Resource):
 
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-        200: 'Success',
-        401: 'Authentication Error: Unauthorized Access',
-        404: 'Resource Not Found Error: Not Found',
-        500: 'Internal Server Error: Database Offline'
-    })
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve the sales data.
     def get(self):
-        conn = connect()
         select = """
             SELECT t_dat, sales_channel_id, price, age, club_member_status
             FROM final_data
             LIMIT 900000;
             """
-        
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
+        # Returning the query execution function.
+        return query_all(select)
 
 
 #---------------------------------------------------------------------------------------
@@ -138,34 +151,20 @@ api.add_namespace(marketing)
 # since most of the information would be the same across all KPIs and Charts.
 @marketing.route("/marketing/marketing_data")
 
+class select_marketing(Resource):
 
-class select_user(Resource):
-
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-        200: 'Success',
-        401: 'Authentication Error: Unauthorized Access',
-        404: 'Resource Not Found Error: Not Found',
-        500: 'Internal Server Error: Database Offline'
-    })
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve the marketing data.
     def get(self):
-        conn = connect()
         select = """
             SELECT customer_id, t_dat, sales_channel_id, price, age, club_member_status, fashion_news_frequency
             FROM final_data
             LIMIT 900000;
             """
-        
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
+        # Returning the query execution function.
+        return query_all(select)
 
 
 #---------------------------------------------------------------------------------------
@@ -183,33 +182,21 @@ api.add_namespace(cust_pref)
 # In order to avoid replication and optimize loading times, only one endpoint was created for this tab
 # since most of the information would be the same across all Key Information and Charts.
 @cust_pref.route("/cust_pref/cust_pref_data")
-class select_user(Resource):
 
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-    200: 'Success',
-    401: 'Authentication Error: Unauthorized Access',
-    404: 'Resource Not Found Error: Not Found',
-    500: 'Internal Server Error: Database Offline'
-})
+class select_pref(Resource):
+
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve the customer preferences data.
     def get(self):
-        conn = connect()
         select = """
             SELECT t_dat, sales_channel_id, price, age, club_member_status, article_id, product_type_name, colour_group_name
             FROM final_data
             LIMIT 900000;
             """
-        
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
+        # Returning the query execution function.
+        return query_all(select)
 
 
 #---------------------------------------------------------------------------------------
@@ -227,65 +214,39 @@ api.add_namespace(various)
 @various.route("/various/customers/<string:id>")
 @various.doc(params = {'id': 'The ID of the user'})
 
-class select_user(Resource):
+class select_info_id(Resource):
 
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-        200: 'Success',
-        401: 'Authentication Error: Unauthorized Access',
-        404: 'Resource Not Found Error: Not Found',
-        500: 'Internal Server Error: Database Offline'
-    })
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve the customer information data based on its id.
     def get(self, id):
         id = str(id)
-        conn = connect()
         select = """
             SELECT *
             FROM customers
             WHERE customer_id = '{0}';""".format(id)
-
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
+        # Returning the query execution function.
+        return query_all(select)
 
 
 # Create an API route for accessing the information of all customers that are club members.
 @various.route("/various/customers/club-members")
 
-class select_user(Resource):
+class select_members(Resource):
 
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-        200: 'Success',
-        401: 'Authentication Error: Unauthorized Access',
-        404: 'Resource Not Found Error: Not Found',
-        500: 'Internal Server Error: Database Offline'
-    })
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve the customer information for all club members.
     def get(self):
-        conn = connect()
         select = """
             SELECT *
             FROM customers
             WHERE club_member_status = 'ACTIVE'
             """
-        
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
+        # Returning the query execution function.
+        return query_all(select)
 
 
 # Create an API endpoint for accessing all transactions done by a customer based on its customer_id.
@@ -295,31 +256,18 @@ class select_user(Resource):
 
 class select_all_transactions_from_user(Resource):
 
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-        200: 'Success',
-        401: 'Authentication Error: Unauthorized Access',
-        404: 'Resource Not Found Error: Not Found',
-        500: 'Internal Server Error: Database Offline'
-    })
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve all transactions from a given customer based on its id.
     def get(self, id):
         id = str(id)
-        conn = connect()
         select = """
             SELECT *
             FROM transactions
             WHERE customer_id = '{0}';""".format(id)
-        
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
+        # Returning the query execution function.
+        return query_all(select)
 
 
 # Create an API endpoint for accessing all article rows (limited to 50 rows).
@@ -327,31 +275,17 @@ class select_all_transactions_from_user(Resource):
 
 class get_all_articles(Resource):
 
-    # Defining responses status for the API endpoint.
-    @api.doc(responses={
-        200: 'Success',
-        401: 'Authentication Error: Unauthorized Access',
-        404: 'Resource Not Found Error: Not Found',
-        500: 'Internal Server Error: Database Offline'
-    })
+    # Defining responses for the API endpoint.
+    @api.doc(responses={**common_responses})
 
     # Declaring the SQL query to retrieve the first 50 article rows.
     def get(self):
-        conn = connect()
         select = """
             SELECT *
             FROM articles
             LIMIT 50;"""
-        
-        # Executing the query.
-        result = conn.execute(select).fetchall()
-
-        # Disconnecting from the database.
-        disconnect(conn)
-
-        # Returning the query result as JSON.
-        return jsonify({'result': [dict(row) for row in result]})
-
+        # Returning the query execution function.
+        return query_all(select)
 
 #---------------------------------------------------------------------------------------
 # Run Flask
