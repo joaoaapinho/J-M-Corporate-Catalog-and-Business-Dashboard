@@ -53,7 +53,9 @@ if authentication_status:
     api_url = "https://api-dot-capstone-database-test.oa.r.appspot.com"
 
     def make_request(main_url, service_url):
-        headers = {"Authorization": "Bearer DO_NOT_LOSE_THIS_KEY"}
+        # For security reasons, this header key was only included in Google App Engine.
+        # ↓
+        headers = {"Authorization": "Bearer "}
         response = requests.get(f"{main_url}{service_url}", headers = headers)
         response_json = response.json()
         return response_json
