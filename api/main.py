@@ -38,8 +38,10 @@ api = Api(app, version = '2.0',
 )
 
 # Establishing an API key for the authenticator.
+# For security reasons, this key was only included in Google App Engine.
+# ↓
 auth_db = { 
-    'DO_NOT_LOSE_THIS_KEY'
+    ''
 }
 
 # Establishing the connection with the MySQL database using the provided credentials.
