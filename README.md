@@ -4,7 +4,6 @@
 <h3 align="center">J&M Corporate Catalog and Business Dashboard</h3>
 
 <p align="center"><b>Done by:</b> João André Pinho</p>
-<p align="center"><b>Project Supervisors:</b> Gustavo Martín Vela & Pepe García</p>
 
 <h2>🔗🔑 Project Links and User Credentials </h2>
 
@@ -17,8 +16,6 @@ In order to access either the catalog or the dashboard services, please use one 
 
 | Username  | Password (Non-Hashed Format) |
 | ------------- | ------------- |
-| suguslabs  | Capstone#23#  |
-| pepegar  | AdvProg#23#  |
 | joaoapinho  | #JustCoding23  |
 
 <h2> 👁‍🗨 Overview </h2>
