@@ -12,7 +12,7 @@ Links:
 - **Business Dashboard** - https://frontend-streamlit-dot-capstone-database-test.oa.r.appspot.com/
 - **API Endpoints** - https://api-dot-capstone-database-test.oa.r.appspot.com/
 
-In order to access either the catalog or the dashboard services, please use one of the pre-registered profiles below:
+In order to access either the catalog or the dashboard services, please use the pre-registered profile below:
 
 | Username  | Password (Non-Hashed Format) |
 | ------------- | ------------- |
